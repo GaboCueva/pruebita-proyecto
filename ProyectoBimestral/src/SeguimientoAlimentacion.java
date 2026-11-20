@@ -13,14 +13,17 @@ public class SeguimientoAlimentacion {
         int frutas = 0;
         int otros = 0;
         int diasCompletos = 0;
+        int completoDia = 0;
         double promedioComidas;
         double porcentajeComida;
         boolean condicionComida;
         for (int i = 1; i < 8; i++) {
+            completoDia = 0;
             System.out.print("Comiste el desayuno en el día " + i + " (true/false): ");
             condicionComida = tcl.nextBoolean();
             if (condicionComida == true){
                 desayuno += 1;
+                completoDia += 1;
                 do {
                     System.out.println("Seleccione la opción del alimento consumido:");
                     System.out.println("1: Frutas y Verduras");
@@ -50,6 +53,7 @@ public class SeguimientoAlimentacion {
             condicionComida = tcl.nextBoolean();
             if (condicionComida == true){
                 almuerzo += 1;
+                completoDia += 1;
                 do {
                     System.out.println("Seleccione la opción del alimento consumido:");
                     System.out.println("1: Frutas y Verduras");
@@ -79,6 +83,7 @@ public class SeguimientoAlimentacion {
             condicionComida = tcl.nextBoolean();
             if (condicionComida == true){
                 cena += 1;
+                completoDia += 1;
                 do {
                     System.out.println("Seleccione la opción del alimento consumido:");
                     System.out.println("1: Frutas y Verduras");
@@ -104,6 +109,8 @@ public class SeguimientoAlimentacion {
                     }
                 } while (tipoAlimento < 1 || tipoAlimento > 4);
             }            
+            if (completoDia == 3)
+                diasCompletos += 1;
         }
         comidasReali = desayuno + almuerzo + cena;
         comidasOmit = 21 - comidasReali;
@@ -120,6 +127,6 @@ public class SeguimientoAlimentacion {
         System.out.println("Otros alimentos: " + otros);
         System.out.println("Promedio comidas diarias: " + promedioComidas);
         System.out.println("Porcentaje de comidas realizadas en la semana: " + porcentajeComida + "%");
-        System.out.println("jfdaslkgnjfljdaglad");
+        System.out.println("Dias en los que se completaron las 3 comidas: " + diasCompletos);
     }
 }
