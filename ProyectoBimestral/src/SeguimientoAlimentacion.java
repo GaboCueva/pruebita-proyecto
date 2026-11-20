@@ -6,8 +6,8 @@ public class SeguimientoAlimentacion {
         int almuerzo = 0;
         int cena = 0;
         int tipoAlimento = 0;
-        int comidasReali = 0;
-        int comidasOmit = 0;
+        double comidasReali = 0;
+        double comidasOmit = 0;
         int cereales = 0;
         int carnes = 0;
         int frutas = 0;
