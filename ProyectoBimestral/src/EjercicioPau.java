@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NewClass {
+public class EjercicioPau {
     public static void main(String[] args) {
         Scanner tcl = new Scanner(System.in);
         int respuesta, momento, tipo;

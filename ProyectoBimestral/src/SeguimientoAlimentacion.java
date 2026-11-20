@@ -23,102 +23,102 @@ public class SeguimientoAlimentacion {
             condicionComida = tcl.next().charAt(0);
             condicionComida = Character.toUpperCase(condicionComida);
             do {
-            if (condicionComida == 'S'){
-                desayuno += 1;
-                completoDia += 1;
-                do {
-                    System.out.println("Seleccione la opción del alimento consumido:");
-                    System.out.println("1: Frutas y Verduras");
-                    System.out.println("2: Cereales y Tubérculos");
-                    System.out.println("3: Carnes, Huevos y Legumbres");
-                    System.out.println("4: Otros");
-                    tipoAlimento = tcl.nextInt();
-                    switch (tipoAlimento) {
-                        case 1:
-                            frutas += 1;
-                            break;
-                        case 2:
-                            cereales += 1;
-                            break;
-                        case 3:
-                            carnes += 1;
-                            break;
-                        case 4:
-                            otros += 1;
-                            break;
-                        default:
-                            System.out.println("Valor inválido, intente de nuevo.");
-                    }
-                } while (tipoAlimento < 1 || tipoAlimento > 4);
-            }
+                if (condicionComida == 'S'){
+                    desayuno += 1;
+                    completoDia += 1;
+                    do {
+                        System.out.println("Seleccione la opción del alimento consumido:");
+                        System.out.println("1: Frutas y Verduras");
+                        System.out.println("2: Cereales y Tubérculos");
+                        System.out.println("3: Carnes, Huevos y Legumbres");
+                        System.out.println("4: Otros");
+                        tipoAlimento = tcl.nextInt();
+                        switch (tipoAlimento) {
+                            case 1:
+                                frutas += 1;
+                                break;
+                            case 2:
+                                cereales += 1;
+                                break;
+                            case 3:
+                                carnes += 1;
+                                break;
+                            case 4:
+                                otros += 1;
+                                break;
+                            default:
+                                System.out.println("Valor inválido, intente de nuevo.");
+                        }
+                    } while (tipoAlimento < 1 || tipoAlimento > 4);
+                }
             }
             while (condicionComida != 'S' && condicionComida != 'N');
             System.out.print("Comiste el almuerzo en el día " + i + " (S/N): ");
             condicionComida = tcl.next().charAt(0);
             condicionComida = Character.toUpperCase(condicionComida);
             do {
-            if (condicionComida == 'S'){
-                almuerzo += 1;
-                completoDia += 1;
-                do {
-                    System.out.println("Seleccione la opción del alimento consumido:");
-                    System.out.println("1: Frutas y Verduras");
-                    System.out.println("2: Cereales y Tubérculos");
-                    System.out.println("3: Carnes, Huevos y Legumbres");
-                    System.out.println("4: Otros");
-                    tipoAlimento = tcl.nextInt();
-                    switch (tipoAlimento) {
-                        case 1:
-                            frutas += 1;
-                            break;
-                        case 2:
-                            cereales += 1;
-                            break;
-                        case 3:
-                            carnes += 1;
-                            break;
-                        case 4:
-                            otros += 1;
-                            break;
-                        default:
-                            System.out.println("Valor inválido, intente de nuevo.");
-                    }
-                } while (tipoAlimento < 1 || tipoAlimento > 4);
-            }
+                if (condicionComida == 'S'){
+                    almuerzo += 1;
+                    completoDia += 1;
+                    do {
+                        System.out.println("Seleccione la opción del alimento consumido:");
+                        System.out.println("1: Frutas y Verduras");
+                        System.out.println("2: Cereales y Tubérculos");
+                        System.out.println("3: Carnes, Huevos y Legumbres");
+                        System.out.println("4: Otros");
+                        tipoAlimento = tcl.nextInt();
+                        switch (tipoAlimento) {
+                            case 1:
+                                frutas += 1;
+                                break;
+                            case 2:
+                                cereales += 1;
+                                break;
+                            case 3:
+                                carnes += 1;
+                                break;
+                            case 4:
+                                otros += 1;
+                                break;
+                            default:
+                                System.out.println("Valor inválido, intente de nuevo.");
+                        }
+                    } while (tipoAlimento < 1 || tipoAlimento > 4);
+                }
             }
             while (condicionComida != 'S' && condicionComida != 'N');
             System.out.print("Comiste la cena en el día " + i + " (S/N): ");
             condicionComida = tcl.next().charAt(0);
             condicionComida = Character.toUpperCase(condicionComida);
             do {
-            if (condicionComida == 'S'){
-                cena += 1;
-                completoDia += 1;
-                do {
-                    System.out.println("Seleccione la opción del alimento consumido:");
-                    System.out.println("1: Frutas y Verduras");
-                    System.out.println("2: Cereales y Tubérculos");
-                    System.out.println("3: Carnes, Huevos y Legumbres");
-                    System.out.println("4: Otros");
-                    tipoAlimento = tcl.nextInt();
-                    switch (tipoAlimento) {
-                        case 1:
-                            frutas += 1;
-                            break;
-                        case 2:
-                            cereales += 1;
-                            break;
-                        case 3:
-                            carnes += 1;
-                            break;
-                        case 4:
-                            otros += 1;
-                            break;
-                        default:
-                            System.out.println("Valor inválido, intente de nuevo.");
-                    }
-                } while (tipoAlimento < 1 || tipoAlimento > 4);
-            }
+                if (condicionComida == 'S'){
+                    cena += 1;
+                    completoDia += 1;
+                    do {
+                        System.out.println("Seleccione la opción del alimento consumido:");
+                        System.out.println("1: Frutas y Verduras");
+                        System.out.println("2: Cereales y Tubérculos");
+                        System.out.println("3: Carnes, Huevos y Legumbres");
+                        System.out.println("4: Otros");
+                        tipoAlimento = tcl.nextInt();
+                        switch (tipoAlimento) {
+                            case 1:
+                                frutas += 1;
+                                break;
+                            case 2:
+                                cereales += 1;
+                                break;
+                            case 3:
+                                carnes += 1;
+                                break;
+                            case 4:
+                                otros += 1;
+                                break;
+                            default:
+                                System.out.println("Valor inválido, intente de nuevo.");
+                        }
+                    } while (tipoAlimento < 1 || tipoAlimento > 4);
+                }
             }
             while (condicionComida != 'S' && condicionComida != 'N');
             
@@ -138,8 +138,8 @@ public class SeguimientoAlimentacion {
         System.out.println("Cereales y Tubérculos consumidos: " + cereales);
         System.out.println("Carnes, Huevos y Legumbres: " + carnes);
         System.out.println("Otros alimentos: " + otros);
-        System.out.println("Promedio comidas diarias: " + promedioComidas);
-        System.out.println("Porcentaje de comidas realizadas en la semana: " + porcentajeComida + "%");
+        System.out.printf("Promedio comidas diarias: %.2f%n", promedioComidas);
+        System.out.printf("Porcentaje de comidas realizadas en la semana: %.2f%%n", porcentajeComida);
         System.out.println("Días en los que se completaron las 3 comidas: " + diasCompletos);
     }
 }
