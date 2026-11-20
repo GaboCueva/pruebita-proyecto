@@ -14,14 +14,16 @@ public class SeguimientoAlimentacion {
         int otros = 0;
         int diasCompletos = 0;
         int completoDia = 0;
-        double promedioComidas;
-        double porcentajeComida;
-        boolean condicionComida;
-        for (int i = 1; i < 8; i++) {
+        double promedioComidas = 0;
+        double porcentajeComida = 0;
+        char condicionComida;
+        for (int i = 1; i <= 7; i++) {
             completoDia = 0;
-            System.out.print("Comiste el desayuno en el día " + i + " (true/false): ");
-            condicionComida = tcl.nextBoolean();
-            if (condicionComida == true){
+            System.out.print("Comiste el desayuno en el día " + i + " (S/N): ");
+            condicionComida = tcl.next().charAt(0);
+            condicionComida = Character.toUpperCase(condicionComida);
+            do {
+            if (condicionComida == 'S'){
                 desayuno += 1;
                 completoDia += 1;
                 do {
@@ -49,9 +51,13 @@ public class SeguimientoAlimentacion {
                     }
                 } while (tipoAlimento < 1 || tipoAlimento > 4);
             }
-            System.out.print("Comiste el almuerzo en el día " + i + " (true/false): ");
-            condicionComida = tcl.nextBoolean();
-            if (condicionComida == true){
+            }
+            while (condicionComida != 'S' && condicionComida != 'N');
+            System.out.print("Comiste el almuerzo en el día " + i + " (S/N): ");
+            condicionComida = tcl.next().charAt(0);
+            condicionComida = Character.toUpperCase(condicionComida);
+            do {
+            if (condicionComida == 'S'){
                 almuerzo += 1;
                 completoDia += 1;
                 do {
@@ -79,9 +85,13 @@ public class SeguimientoAlimentacion {
                     }
                 } while (tipoAlimento < 1 || tipoAlimento > 4);
             }
-            System.out.print("Comiste cena en el día " + i + " (true/false): ");
-            condicionComida = tcl.nextBoolean();
-            if (condicionComida == true){
+            }
+            while (condicionComida != 'S' && condicionComida != 'N');
+            System.out.print("Comiste la cena en el día " + i + " (S/N): ");
+            condicionComida = tcl.next().charAt(0);
+            condicionComida = Character.toUpperCase(condicionComida);
+            do {
+            if (condicionComida == 'S'){
                 cena += 1;
                 completoDia += 1;
                 do {
@@ -108,13 +118,16 @@ public class SeguimientoAlimentacion {
                             System.out.println("Valor inválido, intente de nuevo.");
                     }
                 } while (tipoAlimento < 1 || tipoAlimento > 4);
-            }            
+            }
+            }
+            while (condicionComida != 'S' && condicionComida != 'N');
+            
             if (completoDia == 3)
                 diasCompletos += 1;
         }
         comidasReali = desayuno + almuerzo + cena;
         comidasOmit = 21 - comidasReali;
-        promedioComidas = comidasReali / 21;
+        promedioComidas = comidasReali / 7;
         porcentajeComida = comidasReali * 100 / 21;
         System.out.println("Las comidas realizadas en la semana fueron: " + comidasReali);
         System.out.println("Desayunos: " + desayuno);
@@ -127,6 +140,6 @@ public class SeguimientoAlimentacion {
         System.out.println("Otros alimentos: " + otros);
         System.out.println("Promedio comidas diarias: " + promedioComidas);
         System.out.println("Porcentaje de comidas realizadas en la semana: " + porcentajeComida + "%");
-        System.out.println("Dias en los que se completaron las 3 comidas: " + diasCompletos);
+        System.out.println("Días en los que se completaron las 3 comidas: " + diasCompletos);
     }
 }
