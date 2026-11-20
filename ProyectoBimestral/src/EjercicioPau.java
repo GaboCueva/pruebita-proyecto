@@ -89,7 +89,8 @@ public class EjercicioPau {
         promedio = totalComidasReali/7;
         porcentaje = (totalComidasReali*100)/21;
         System.out.println("---- RESUMEN SEMANAL ----");
-        System.out.println("Comidas realizadas en la semana: "+totalComidasReali);
+        System.out.println("Comidas realizadas en la semana: "+
+                totalComidasReali);
         System.out.println("Cantidad de desayunos: "+totalD);
         System.out.println("Cantidad de almuerzos: "+totalA);
         System.out.println("Cantidad de cenas: "+totalC);
@@ -100,7 +101,7 @@ public class EjercicioPau {
         System.out.println("Otros consumidos: "+otros);
         System.out.println("Promedio de comidas diarias: "+promedio);
         System.out.println("Porcentaje de comidas en la semana: "+porcentaje);
-        System.out.println("Dias que completarin las tres comidas: "
+        System.out.println("Dias que completaste las tres comidas: "
                 +diasCompletos);
     }    
 }
