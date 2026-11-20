@@ -46,8 +46,6 @@ public class EjercicioPau {
                     System.out.println("  4 Otros");
                     System.out.print("Ingresa tu respuesta: ");
                     tipo = tcl.nextInt();
-                    System.out.println("Perfecto! se ha registrado tu " + nombre);
-                    System.out.println(" ");
                     switch (tipo) {
                         case 1:
                             frutas += 1;
@@ -62,12 +60,13 @@ public class EjercicioPau {
                             otros += 1;
                             break;
                     }
-                    while (tipo<1 && tipo>4){
+                    while (tipo<1 || tipo>4){
                         System.out.print("Asegurese de ingresar una de las "
                                 + "opciones (1, 2, 3 o 4): ");
                         tipo = tcl.nextInt();
-                        System.out.println(" ");
                     }
+                    System.out.println("Perfecto, se ha registrado tu "+nombre);
+                    System.out.println(" ");
                 }
                 else{
                     totalComidasOmi += 1;
